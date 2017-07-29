@@ -1,0 +1,17 @@
+I followed https://udacity-reviews-uploads.s3.amazonaws.com/_attachments/41330/1493863065/pid_control_document.pdf for tuning parameters.
+
+Method used: Manual
+
+Values started from Kp = 0, Ki = 0, Kd = 0
+
+1. Started increasing Kp in multiple of 0.1 until the oscillations
+2. After that started increasing Kd until very less oscillations observed
+3. Has to try multiple combinations of Kp and Kd for first two steps
+4. Then started increasing Ki until the drive was smooth
+
+Effects of parameters
+- Increasing Kp caused overshoot at the start only
+- Keeping Kp low caused overshoot near bridge where CTE becomes high
+- Increasing Kd helped to fix overshoot but increasing it too much also caused overshoots
+
+I also tried using PID controller for speed but did not get enough time to tune it.
